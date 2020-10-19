@@ -41,7 +41,7 @@ jobs:
       - name: Run kubeval
         env:
           KUBERNETES_VERSION: ${{ matrix.k8s }}
-        run: .github/kubeval.sh
+        run: .github/kubeval.sh deployments/kubernetes/chart/reloader/
 
   install-chart:
     name: install-chart
