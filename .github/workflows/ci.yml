@@ -3,7 +3,7 @@ name: Lint and Test Charts
 on:
   pull_request:
     paths:
-      - 'deployments/kubernetes/chart/reloader/**'
+      - 'charts/**'
 
 jobs:
   lint-chart:
@@ -41,7 +41,7 @@ jobs:
       - name: Run kubeval
         env:
           KUBERNETES_VERSION: ${{ matrix.k8s }}
-        run: .github/kubeval.sh deployments/kubernetes/chart/reloader/
+        run: .github/kubeval.sh charts/
 
   install-chart:
     name: install-chart
