@@ -15,7 +15,7 @@ jobs:
         uses: helm/chart-testing-action@master
         with:
           command: lint
-          config: .github/ct-config.yaml
+          config: .github/ct-config.yml
 
   lint-docs:
     runs-on: ubuntu-latest
@@ -65,4 +65,4 @@ jobs:
         uses: helm/chart-testing-action@master
         with:
           command: install
-          config: .github/ct-config.yaml
+          config: .github/ct-config.yml
